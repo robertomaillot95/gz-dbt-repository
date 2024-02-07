@@ -29,3 +29,43 @@ sources:
             tests:
               - unique
               - not_null
+      - name: adwords
+        identifier: raw_gz_adwords
+        description: results adwords campaign
+        tests:
+          - unique:
+              column_name: (date_date || "_" || campaign_key)
+          - not_null:
+              column_name: (date_date || "_" || campaign_key)
+      - name: bing
+        identifier: raw_gz_bing
+        description: results bing campaign
+        tests:
+          - unique:
+              column_name: (date_date || "_" || campaign_key)
+          - not_null:
+              column_name: (date_date || "_" || campaign_key)
+      - name: criteo
+        identifier: raw_gz_criteo
+        description: results criteo campaign
+        tests:
+          - unique:
+              column_name: (date_date || "_" || campaign_key)
+          - not_null:
+              column_name: (date_date || "_" || campaign_key)
+
+      - name: facebook
+        identifier: raw_gz_facebook
+        description: results facebook campaign
+        tests:
+          - unique:
+              column_name: (date_date || "_" || campaign_key)
+          - not_null:
+              column_name: (date_date || "_" || campaign_key)
+
+models:
+  - name: finance_campaigns_day
+    description: all the data aggregate by day for finance team
+    tests:
+       - unique:
+          column_name: date_date
