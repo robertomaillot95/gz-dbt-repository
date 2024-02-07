@@ -1,4 +1,4 @@
-{{ config(materialized='table') }}
+
 
 WITH a AS(
 SELECT 
