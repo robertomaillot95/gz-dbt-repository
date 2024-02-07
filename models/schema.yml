@@ -62,3 +62,10 @@ sources:
               column_name: (date_date || "_" || campaign_key)
           - not_null:
               column_name: (date_date || "_" || campaign_key)
+
+models:
+  - name: finance_campaigns_day
+    description: all the data aggregate by day for finance team
+    tests:
+       - unique:
+          column_name: date_date
